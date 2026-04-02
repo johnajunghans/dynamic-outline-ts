@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+main {
+  font-family: 'Inter';
+}
+
+header {
+  height: 75px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* padding: 0 1rem; */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  
+}
+
+#root-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 3rem 1rem;
+  width: 75%;
+  min-height: calc(100vh - 200px);
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.block-container {
+  /* display: inline-block; */
+  flex-direction: column;
+}
+
+.block-children {
+  --initial-inset-x: 0px;
+  --initial-inset-y: 0px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #F8F8FF;
+  border-radius: 5px;
+  width: 600px;
+  height: 50px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.block-children > .block-container {
+  /* transform: translateX(calc(var(--initial-inset-x) + 40px)) translateY(calc(var(--initial-inset-y) + 65px)); */
+  /* padding-top: calc(var(--initial-inset-y) + 65px); */
+  margin-left: calc(var(--initial-inset-x) + 45px);
+}
